@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOCKLERO</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: rgb(28, 26, 99);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            width: 262px;
+            height: 353px;
+            background: rgb(22, 21, 79);
+            border-radius: 5px;
+            padding-top: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 62px;
+            height: 62px;
+            background: rgb(25, 24, 87);
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 7px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .title {
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 34px;
+        }
+
+        .field {
+            width: 192px;
+            margin-bottom: 34px;
+        }
+
+        .field label {
+            display: block;
+            color: rgb(191, 190, 208);
+            font-size: 8px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .field input {
+            width: 192px;
+            height: 38px;
+            border: none;
+            outline: none;
+            border-radius: 1px;
+            background: rgb(61, 60, 107);
+            color: white;
+            font-size: 10px;
+            padding: 0 5px;
+        }
+
+        .field input::placeholder {
+            color: rgb(92, 91, 128);
+        }
+
+        .field input:focus {
+            outline: 1px solid rgb(80, 78, 130);
+        }
+
+        .login-button {
+            width: 129px;
+            height: 33px;
+            margin-top: -1px;
+            border: none;
+            border-radius: 1px;
+            background: black;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background: rgb(15, 15, 15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <div class="logo">
+            <img src="logo.png" alt="Stocklero">
+        </div>
+
+        <div class="title">
+            STOCKLERO
+        </div>
+
+        <div class="field">
+            <label>E-MAIL</label>
+            <input type="email" placeholder="seu@email.com">
+        </div>
+
+        <div class="field">
+            <label>SENHA</label>
+            <input type="password" placeholder="••••••••">
+        </div>
+
+        <button class="login-button" onclick="entrar()">
+            ENTRAR
+        </button>
+
+    </div>
+
+    <script>
+        function entrar() {
+            const email = document.querySelector('input[type="email"]').value;
+            const senha = document.querySelector('input[type="password"]').value;
+
+            if (email === "" || senha === "") {
+                alert("Preencha todos os campos.");
+                return;
+            }
+
+            alert("Login realizado!");
+        }
+    </script>
+
+</body>
+
+</html>
